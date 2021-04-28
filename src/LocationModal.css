@@ -1,0 +1,67 @@
+.content {
+    height:  250px;
+    width: 300px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    top:40%;
+    left: 40%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+.content_title{
+    background-color: #ececec;
+    margin: 0px 0px 5px 0px;
+    padding: 10px 0 10px 10px ;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    /* border-style: solid; */
+}
+
+.content_text{
+    margin: 10px;
+    font-size: small;
+    
+}
+
+.submit_pincode{
+    margin:10px  0;
+    display: flex;
+    justify-content: center;
+}
+
+.submit{
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.signin{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    border: 1px solid;
+    border-radius: 3px;
+    background-image: linear-gradient(0deg, rgba(240,193,75,1) 60%, rgba(255,229,165,1) 80% );
+}
+
+p{margin: 0px;
+text-align: center;}

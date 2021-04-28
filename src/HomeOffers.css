@@ -1,0 +1,100 @@
+.offers{
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 450px;
+    min-width: 100px;
+    /* border: solid; */
+    z-index: 1;
+    background-color: white ;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.offers:hover{
+    box-shadow: 0 30px 50px 0 rgba(0,0,0,8);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.offer_title{
+    /* border: 2px solid red; */
+    width: 100%;
+    font-size: 20px ;
+    margin: 10px;
+
+    /* text-align: center; */
+}
+
+.offer_img{
+    /* margin:5px; */
+    /* padding: 10px; */
+    width: 100%;
+    /* max-width: 100px; */
+    /* height: 100%; */
+    object-fit:none ;
+    /* background-size: contain; */
+    /* object-position: ; */
+    height: 300px;
+    /* border: solid; */
+
+}
+
+/* a{
+    text-decoration: none;
+    width: auto;
+    text-align: left;
+} */
+
+a{
+    text-align: center;
+    
+    text-decoration: none;
+    /* color: red; */
+    /* text-underline-offset: none; */
+    
+}
+
+.deals:hover{
+    text-decoration: underline;  
+    /* border: solid; */
+}
+
+.multiple_offers{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* border: solid; */
+    height: 300px;
+
+    
+}
+
+.multiple_offers  .offer_img{
+    /* display: inline-block; */
+    
+    height: 120px;
+    padding: 2px;
+    width: 120px;
+
+    /* position: relative;; */
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* vertical-align: top; */
+    object-fit:none ;
+    
+    /* !important; */
+    /* width: 0px !important; */
+    /* border:solid; */
+
+}
+
+.deals{
+    padding: 0 0 20px;
+    margin-top: 10px;
+    /* size: 4px; */
+}

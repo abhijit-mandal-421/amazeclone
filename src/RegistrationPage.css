@@ -1,0 +1,145 @@
+.registration_page {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    }
+    
+    .registration_form {
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* margin: 10px; */
+    padding: 20px;
+    z-index: 1;
+    /* width: 100%; */
+    height: 500x;
+    width: 330px;
+    border: 2px solid #ececec;
+    border-radius: 4px;
+    box-shadow: 1px 2px 10px 1px grey;
+    }
+    
+    .reg_logo {
+    height: 50px;
+    width: 80px;
+    object-fit: contain;
+    }
+    
+    hr {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    color: grey;
+    background-color: transparent;
+    width: 320px;
+    }
+    
+    h1 {
+    width: 100%;
+    /* margin-top: -5px; */
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    /* border: solid; */
+    /* padding: 0px 10px; */
+    }
+    
+    label {
+    /* color: #f0c14b; */
+    /* border: border-box; */
+    display: block;
+    padding: 5px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    }
+    
+    input {
+    width: 100%;
+    height: 25px;
+    border-radius: 3px;
+    /* padding: 1px 0px; */
+    margin-bottom: 1px;
+    border: 1px solid;
+    border-color: grey;
+    /* padding */
+    }
+    
+    input:focus {
+    width: 100%;
+    /* height: 30px; */
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 2px #fd9c1a;
+    
+    /* outline: 0; */
+    /* padding */
+    }
+    
+    .reg_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    width: 300px;
+    /* margin-bottom: 10px; */
+    }
+    
+    .reg_note {
+    font-size: 13px;
+    }
+    
+    p {
+    font-size: 12px;
+    /* margin-top: 5px; */
+    }
+    
+    .product_img {
+    object-fit: contain;
+    margin-bottom: 15px;
+    /* width:100%; */
+    max-height: 200px;
+    }
+
+    .lbl{
+        display: flex;
+        justify-content: space-between;
+        font-size: small;
+    }
+
+    .error{
+        display: flex;
+        align-items: center;
+    }
+
+    .error_icon{
+        height:15px !important;
+        width: 15px !important;
+    }
+
+    
+    .form_submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: black;
+    padding: 8px 150px;
+    background-color: #f0c14b;
+    border: 1px solid;
+    border-radius: 3px;
+    background-image: linear-gradient(
+    0deg,
+    rgba(240, 193, 75, 1) 60%,
+    rgba(255, 229, 165, 1) 80%
+    );
+    }
+    
+    .form_submit:hover {
+        display: flex;
+        background-image: none;
+        background-color: rgba(240, 193, 75, 1);
+        cursor: pointer;
+        
+        /* box-shadow: 0px 0px 4px #000000; */
+        }
+    
+    
