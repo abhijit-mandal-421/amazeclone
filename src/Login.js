@@ -76,7 +76,7 @@ const Login = () => {
      <div>
      <div className="password_label">
       <label htmlFor="password">Password</label>
-      <a href="" className="forgot_pwd">
+      <a href="https://www.google.co.in/" className="forgot_pwd">
        Forgot Password?
       </a>
       </div>

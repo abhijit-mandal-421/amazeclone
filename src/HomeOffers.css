@@ -43,6 +43,14 @@
 
 }
 
+
+/* https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered */
+.offer_img:hover + .deals{
+
+    text-decoration: underline;
+}
+
+
 /* a{
     text-decoration: none;
     width: auto;

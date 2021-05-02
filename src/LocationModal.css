@@ -9,6 +9,7 @@
     top:40%;
     left: 40%;
     border-radius: 10px;
+    color: black;
     z-index: 1;
 }
 
@@ -42,14 +43,20 @@
 }
 
 .submit_pincode{
-    margin:10px  0;
+    margin:10px  10px;
     display: flex;
     justify-content: center;
 }
 
+.pincode{
+    padding: 10px;
+}
+
 .submit{
-    padding: 10px 20px;
+    padding: 5px 20px;
+    height: 25px;
     margin-left: 10px;
+    
 }
 
 .signin{
@@ -63,5 +70,7 @@
     background-image: linear-gradient(0deg, rgba(240,193,75,1) 60%, rgba(255,229,165,1) 80% );
 }
 
-p{margin: 0px;
-text-align: center;}
+p{padding-top: 15px;
+text-align: center;
+font-weight: 700;
+font-size: x-large;}

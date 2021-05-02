@@ -18,6 +18,11 @@ const Header = () => {
         <Link to = {e.value}></Link>
     }
 
+    // const popupModal = (data) =>{
+    //     console.log({data})
+    //         setOpenLocModal(data)
+    // }
+
     return (
         <div className= 'header'>
             {/* <img src="https://fonts.google.com/icons?selected=Material%20Icons%20Two%20Tone%3Alocation_on" alt=""/> */}
@@ -30,9 +35,11 @@ const Header = () => {
                 <div onClick = {() => setOpenLocModal(true)} className="header_location">
                     <PersonPinCircleIcon className='location_icon'/>
                     <div className='header_search_location'><span className= 'line1'>Hello</span> <span className= 'line2'>Select your address </span> </div> 
-                {/* onclick header_location should show an alert box  */}
-                <LocationModal open={openLocModal} close={()=>setOpenLocModal(false)} />    
+                    {/* onclick header_location should show an alert box  */}
+                    
                 </div> 
+
+                {openLocModal && <LocationModal close={setOpenLocModal} />}
                 {/* <div className='header_search_category'> */}
                     <select onChange = {select_category} className='header_search_category'>
                         <option value='/'>All</option>
@@ -56,10 +63,12 @@ const Header = () => {
                         </div>
                     </Link>
 
-                    <div className='header_nav_option'>
-                        <span className = 'line1'>Returns</span>
-                        <span className = 'line2'>& Orders</span>
-                    </div>
+                    <Link to='/order' style={{color:'white'}}>
+                        <div className='header_nav_option'>
+                            <span className = 'line1'>Returns</span>
+                            <span className = 'line2'>& Orders</span>
+                        </div>
+                    </Link>
 
                     <Link to='/checkout' style={{color:'white'}}>
                     <div className='header_cart'>

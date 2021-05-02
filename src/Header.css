@@ -11,6 +11,7 @@
     /* border: 2px solid sienna; */
     background-color: #131921;
     position: sticky;
+    top: 0;
     z-index: 100;  
     padding: 10px;  
 }
@@ -62,6 +63,7 @@
     cursor: pointer;
     /* position: relative; */
     border: none;
+    cursor: pointer;
 }
 
 .location_icon{
@@ -99,6 +101,11 @@ color: #131921;
     /* margin-top: 15px; */
     background-color: #d8d8d8;
     object-fit: none;
+}
+
+.header_search_category:hover{
+    background-color: #e2e0e0d0;
+    cursor: pointer;
 }
 
 .header_nav{

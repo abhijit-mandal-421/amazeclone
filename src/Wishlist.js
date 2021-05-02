@@ -29,7 +29,7 @@ const Wishlist = () => {
                         <WishlistProduct product_id={item} title={product_display.title} price={product_display.price} product_img={product_display.product_img} />
                             <hr />
                             </>)
-                }))}) : <div>No Items in Wishlist</div>
+                }))}) : <h1 className = 'no_items'>No Items in Wishlist</h1>
                 
                 }
 
@@ -45,7 +45,7 @@ const Wishlist = () => {
 
               decimalScale = {2} value = {wish_subtotal} displayType = {'text'} thousandSeparator={true} thousandsGroupStyle="lakh" prefix={'₹'} />
                 {/* wish_Subtotal = <strong>{state.wishlist.length}</strong>  */}
-
+            
                 <Link to='checkout'>Go to Checkout</Link>
             </div>
 </div>

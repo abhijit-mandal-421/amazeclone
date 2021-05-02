@@ -14,6 +14,7 @@ import Toys from './Toys';
 import Chocolates from './Chocolates';
 import OfficeNeeds from './OfficeNeeds';
 import Workouts from './Workouts';
+import Orders from './Orders.js'
 
 
 
@@ -40,6 +41,7 @@ function App() {
       <Route path ="/chocolates"><Chocolates /></Route>
       <Route path ="/office_needs"><OfficeNeeds /></Route>
       <Route path ="/workouts"><Workouts /></Route>
+      <Route path="/order"><Orders /></Route>
 
 
       <Route path="/"><HomePage /></Route>

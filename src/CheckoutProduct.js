@@ -20,16 +20,39 @@ const CheckoutProduct = ({qty, product_id, title, price, product_img }) => {
       dispatch({type: 'add_to_wishlist',
                 item: product_id
                           })}  
-  
-  // const qty_upd =(e) => {
-  //   var new_qty = e.target.value;
-  //   console.log(qty)
-  //   console.log('new_q')
-  //   console.log(new_qty)
-  //   dispatch({type:'upd_qty_cart',quantity: new_qty - qty})
-    // dispath({type: 'add_to_cart',
-    //         item: product_id})
-  // }
+  var new_cart = [...state.cart];
+  const qty_upd =(e) => {
+    var new_qty = e.target.value;
+    var diff_qty = new_qty - qty;
+    
+
+    console.log(qty)
+    console.log('product_id',product_id)
+    console.log('qty',qty)
+    console.log('new_q',new_qty)
+
+    if (diff_qty > 0) 
+    { 
+      qty = new_qty;
+      for (let i=0 ; i < diff_qty ; i++) { new_cart.push(product_id)}
+      // console.log(diff_qty,'added items', new_cart)
+      
+    }
+    else if(diff_qty < 0)
+    {
+      qty = new_qty;
+      for (let i = 0 ; i < Math.abs(diff_qty) ; i++) 
+        {
+          new_cart.splice(new_cart.indexOf(product_id),1);
+        }
+      // console.log(Math.abs(diff_qty),'removed items', new_cart)
+
+    }
+
+      dispatch({type:'upd_qty_cart',
+              cart : new_cart
+              })
+  }
   
     return (
           <div className="checkout_product">
@@ -46,7 +69,7 @@ const CheckoutProduct = ({qty, product_id, title, price, product_img }) => {
         
           <div>
             {/* <button  > */}<span style={{fontWeight: 700}}>Qty:</span>
-              <select className="product_qty" value = {qty} name= 'p_qty'>
+              <select className="product_qty" value = {qty} name= 'p_qty' onChange= {qty_upd}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -58,12 +81,9 @@ const CheckoutProduct = ({qty, product_id, title, price, product_img }) => {
             <div className="checkout_options"> <span onClick= {deleteInCart}> Delete </span>| <span onClick = {addToWishlist}> Save for later</span></div>
            </div>
 
-            {/* <div className='product_price'> */}
-            {/* <p>{price} </p> */}
             <NumberFormat renderText ={(value) =>  { return (<p className='product_price'>{value} </p>)} }
 
               decimalScale = {2} value = {price} displayType = {'text'} thousandSeparator={true} thousandsGroupStyle="lakh" prefix={'₹'} />
-            {/* </div> */}
           </div>
          );
 }

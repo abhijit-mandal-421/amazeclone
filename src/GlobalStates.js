@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer} from 'react';
+import React, { createContext, useReducer} from 'react';
 
 
 // Creating a context i.e, a memory storage

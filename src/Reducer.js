@@ -3,8 +3,10 @@ export const initialState = {
     n_wishlist_items:0,
     cart:[],
     wishlist:[],
+    order:[],
     cart_quantity: {},
     current_user:'',
+    
     // user_subtotal :0
 };
 
@@ -17,7 +19,7 @@ const reducer =(state, action)=>{
                 wishlist: state.wishlist? (state.wishlist.filter((item) => item !== action.item)) : [], 
                 // user_subtotal:    
             };
-                console.log(state.wishlist.length(), state.n_wishlist_items)
+                // console.log(state.wishlist.length(), state.n_wishlist_items)
         case 'delete_in_cart':
             return {...state, n_items: state.cart.length-1, cart: state.cart.filter((item) => item !== action.item)};
         case 'add_to_wishlist':
@@ -27,8 +29,11 @@ const reducer =(state, action)=>{
             return {...state, 
                 wishlist: state.wishlist.filter((item) => item !== action.item)};
         
-        // case 'upd_qty_cart' :
-        //         return {...state, action.qty}
+        case 'upd_qty_cart' :
+                return {...state, cart: action.cart}
+
+        case 'add_to_order' : 
+                return{...state, order: [...state.order, ...action.cart], cart : []}
 
         default:
             return state;
