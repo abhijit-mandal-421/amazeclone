@@ -45,7 +45,7 @@ const Login = () => {
   {!<Header />}
   <div className="login_page">
 
-  <Link to='/'>
+  <Link to={process.env.PUBLIC_URL}>
   <img
      className="reg_logo"
      src="http://pngimg.com/uploads/amazon/amazon_PNG5.png"
@@ -107,7 +107,7 @@ const Login = () => {
      <span>New to Amazon?</span>      
     </div>
 
-    <Link to='./register'>
+    <Link to={process.env.PUBLIC_URL +'/register'}>
      <button type="submit" className="form_submit">
       Create Your Amazon account
      </button>

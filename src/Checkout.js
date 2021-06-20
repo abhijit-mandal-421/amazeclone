@@ -78,7 +78,7 @@ const Checkout = () => {
                  {/* Subtotal ( <strong>{state.cart.length}</strong> ) :  <strong>{format.format(subtotal)}</strong> */}
 
                 <button className="checkout_btn" onClick = {add_to_order}>Proceed to Buy</button>
-                <Link to='wishlist'>Go to Wishlist</Link>
+                <Link to={process.env.PUBLIC_URL + '/wishlist'}>Go to Wishlist</Link>
             </div>
             </div>
 </div>

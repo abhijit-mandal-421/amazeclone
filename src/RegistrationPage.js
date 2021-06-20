@@ -89,7 +89,7 @@ const RegistrationPage = () => {
 
   // setErrors1({ ...errors1, errors });
 
-  er.username=!regForm.username?  "Your name required" : "";
+  er.username=!regForm.username &&  "Your name required" ;
 
   //  console.log('after username')
   //  er = {...errors}
@@ -168,7 +168,7 @@ const RegistrationPage = () => {
  return (
   <div className="registration_page">
    <div className="registration_form">
-   <Link to='/'>  <img className="reg_logo" src="http://pngimg.com/uploads/amazon/amazon_PNG5.png" alt="logo" /> </Link>
+   <Link to={process.env.PUBLIC_URL}>  <img className="reg_logo" src="http://pngimg.com/uploads/amazon/amazon_PNG5.png" alt="logo" /> </Link>
     <h1>Create Account</h1>
     <form action="" className="reg_form"  onSubmit={handleSubmit}> 
 
@@ -191,7 +191,7 @@ const RegistrationPage = () => {
      <div>
      <div className = 'lbl'>
         <label htmlFor="mob_no">Mobile Number</label>
-        {errors.mob_no ? <div className="error"><InfoIcon className = 'error_icon'/>{errors.mob_no}</div> : ""}
+        {errors.mob_no && <div className="error"><InfoIcon className = 'error_icon'/>{errors.mob_no}</div>}
       </div>
       <input
        type="text"
@@ -209,7 +209,7 @@ const RegistrationPage = () => {
      <div>
      <div className='lbl'>
       <label htmlFor="email">Email (optional)</label>
-      {errors.email ? <div className="error"><InfoIcon className = 'error_icon'/>{errors.email}</div> : ""}
+      {errors.email && <div className="error"><InfoIcon className = 'error_icon'/>{errors.email}</div> }
       </div>
       <input
        type="text"

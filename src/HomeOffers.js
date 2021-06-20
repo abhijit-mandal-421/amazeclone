@@ -8,7 +8,7 @@ const HomeOffers = ({title, image, link}) => {
             
             <p className="offer_title"><strong>{title}</strong></p> 
             
-            <Link to={link}>
+            <Link to={process.env.PUBLIC_URL + '/'+link}>
                 <img className = 'offer_img' src={image} alt=""/>
                 <p className="deals">See all deals</p>
             </Link>

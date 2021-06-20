@@ -46,7 +46,7 @@ const Wishlist = () => {
               decimalScale = {2} value = {wish_subtotal} displayType = {'text'} thousandSeparator={true} thousandsGroupStyle="lakh" prefix={'₹'} />
                 {/* wish_Subtotal = <strong>{state.wishlist.length}</strong>  */}
             
-                <Link to='checkout'>Go to Checkout</Link>
+                <Link to={process.env.PUBLIC_URL + '/checkout'}>Go to Checkout</Link>
             </div>
 </div>
             

@@ -26,27 +26,27 @@ function App() {
     
     <div className="App">
 
-      {location.pathname !== '/signin' && location.pathname !== '/register' ? <Header/> : "" }
+      {location.pathname !== '/signin' && location.pathname !== '/register' && <Header/>  }
       
       
       <Switch>
 
 
-      <Route path="/checkout"><Checkout /></Route>
-      <Route path="/mobiles"><Mobiles /></Route>
-      <Route path ="/register"><RegistrationPage /></Route>
-      <Route path ="/signin"><Login /></Route>
-      <Route path ="/wishlist"><Wishlist /></Route>
-      <Route path ="/toys"><Toys /></Route>
-      <Route path ="/chocolates"><Chocolates /></Route>
-      <Route path ="/office_needs"><OfficeNeeds /></Route>
-      <Route path ="/workouts"><Workouts /></Route>
-      <Route path="/order"><Orders /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/checkout"}><Checkout /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/mobiles"}><Mobiles /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/register"}><RegistrationPage /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/signin"}><Login /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/wishlist"}><Wishlist /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/toys"}><Toys /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/chocolates"}><Chocolates /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/office_needs"}><OfficeNeeds /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/workouts"}><Workouts /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/order"}><Orders /></Route>
 
 
-      <Route path="/"><HomePage /></Route>
+      <Route path ={process.env.PUBLIC_URL + "/"}><HomePage /></Route>
 
-        
+      {console.log('##',process.env.PUBLIC_URL)}
 
       </Switch>
 

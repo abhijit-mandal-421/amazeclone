@@ -15,7 +15,7 @@ const Header = () => {
 
     const select_category = (e) => {
         console.log(e.value);
-        <Link to = {e.value}></Link>
+        <Link to = {process.env.PUBLIC_URL + e.value}></Link>
     }
 
     // const popupModal = (data) =>{
@@ -27,7 +27,7 @@ const Header = () => {
         <div className= 'header'>
             {/* <img src="https://fonts.google.com/icons?selected=Material%20Icons%20Two%20Tone%3Alocation_on" alt=""/> */}
             
-            <Link to='/'>
+            <Link to={process.env.PUBLIC_URL}>
             <img className='header_logo' src="http://pngimg.com/uploads/amazon/small/amazon_PNG18.png" alt="Amazon_logo"/>
             </Link>
 
@@ -56,21 +56,21 @@ const Header = () => {
 
                 
                 <div className='header_nav'>
-                    <Link to='/signin' style={{color:'white'}}>
+                    <Link to={process.env.PUBLIC_URL +'/signin'} style={{color:'white'}}>
                         <div className='header_nav_option'>
                             <span className = 'line1'>Hello, SignIn</span>
                             <span className = 'line2'>Account & Lists</span>
                         </div>
                     </Link>
 
-                    <Link to='/order' style={{color:'white'}}>
+                    <Link to={process.env.PUBLIC_URL +'/order'} style={{color:'white'}}>
                         <div className='header_nav_option'>
                             <span className = 'line1'>Returns</span>
                             <span className = 'line2'>& Orders</span>
                         </div>
                     </Link>
 
-                    <Link to='/checkout' style={{color:'white'}}>
+                    <Link to={process.env.PUBLIC_URL +'/checkout'} style={{color:'white'}}>
                     <div className='header_cart'>
                         <div className='header_cart1'>
                             <span className = 'line1'>Cart</span>
